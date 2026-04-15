@@ -1,0 +1,237 @@
+# Dutch translation for Yard Warden.
+# Copyright (C) 2026 Yard | Digital Agency
+msgid ""
+msgstr ""
+"Project-Id-Version: Yard Warden 0.1.0\n"
+"Report-Msgid-Bugs-To: https://www.yard.nl\n"
+"POT-Creation-Date: 2026-04-15T00:00:00+00:00\n"
+"PO-Revision-Date: 2026-04-15T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: yard_warden\n"
+
+#: yard-warden.php
+msgid "Yard Warden"
+msgstr "Yard Warden"
+
+#: yard-warden.php
+msgid "Enhanced password and login security for WordPress (Bedrock/Acorn friendly)."
+msgstr "Verbeterde wachtwoord- en loginbeveiliging voor WordPress (Bedrock/Acorn-compatibel)."
+
+#: src/ACF.php:61
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/ACF.php:65
+msgid "Minimum password length"
+msgstr "Minimum wachtwoordlengte"
+
+#: src/ACF.php:68
+msgid "Minimum number of characters a password must contain."
+msgstr "Minimaal aantal tekens dat een wachtwoord moet bevatten."
+
+#: src/ACF.php:76
+msgid "Minimum zxcvbn score"
+msgstr "Minimum zxcvbn score"
+
+#: src/ACF.php:79
+msgid "Higher score means harder to guess. 3 is safe, 4 is very strong."
+msgstr "Hogere score betekent moeilijker te raden. 3 is veilig, 4 is zeer sterk."
+
+#. translators: %d: zxcvbn score number
+#: src/ACF.php:83
+msgid "%d — somewhat guessable"
+msgstr "%d — enigszins te raden"
+
+#. translators: %d: zxcvbn score number
+#: src/ACF.php:88
+msgid "%d — safely unguessable (recommended)"
+msgstr "%d — moeilijk te raden (aanbevolen)"
+
+#. translators: %d: zxcvbn score number
+#: src/ACF.php:93
+msgid "%d — very unguessable"
+msgstr "%d — zeer moeilijk te raden"
+
+#: src/Login/LoginServiceProvider.php:52
+msgid "Invalid credentials."
+msgstr "Ongeldige inloggegevens."
+
+#. translators: %d: minimum password length
+#: src/Password/StrengthValidator.php:46
+msgid "Password must be at least %d characters."
+msgstr "Wachtwoord moet minimaal %d tekens lang zijn."
+
+#: src/Password/StrengthValidator.php:56
+msgid "This password is too easy to guess."
+msgstr "Dit wachtwoord is te makkelijk te raden."
+
+#. translators: %d: minimum password length
+#: src/Password/PasswordUIServiceProvider.php:50
+msgid "At least %d characters."
+msgstr "Minimaal %d tekens."
+
+#: src/Password/PasswordUIServiceProvider.php:53
+msgid "Too short"
+msgstr "Te kort"
+
+#: src/Password/PasswordUIServiceProvider.php:55
+msgid "Very weak"
+msgstr "Zeer zwak"
+
+#: src/Password/PasswordUIServiceProvider.php:56
+msgid "Weak"
+msgstr "Zwak"
+
+#: src/Password/PasswordUIServiceProvider.php:57
+msgid "Fair"
+msgstr "Redelijk"
+
+#: src/Password/PasswordUIServiceProvider.php:58
+msgid "Strong"
+msgstr "Sterk"
+
+#: src/Password/PasswordUIServiceProvider.php:59
+msgid "Very strong"
+msgstr "Zeer sterk"
+
+# zxcvbn warnings
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Straight rows of keys are easy to guess"
+msgstr "Rechte rijen toetsen zijn makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Short keyboard patterns are easy to guess"
+msgstr "Korte toetsenbordpatronen zijn makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Use a longer keyboard pattern with more turns"
+msgstr "Gebruik een langer toetsenbordpatroon met meer wendingen"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr "Herhalingen zoals \"aaa\" zijn makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr "Herhalingen zoals \"abcabcabc\" zijn maar iets moeilijker te raden dan \"abc\""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr "Reeksen zoals abc of 6543 zijn makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Recent years are easy to guess"
+msgstr "Recente jaartallen zijn makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Dates are often easy to guess"
+msgstr "Datums zijn vaak makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is a top-10 common password"
+msgstr "Dit is een top-10 veelgebruikt wachtwoord"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is a top-100 common password"
+msgstr "Dit is een top-100 veelgebruikt wachtwoord"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is a very common password"
+msgstr "Dit is een zeer veelgebruikt wachtwoord"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is similar to a commonly used password"
+msgstr "Dit lijkt op een veelgebruikt wachtwoord"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "A word by itself is easy to guess"
+msgstr "Eén enkel woord is makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Names and surnames by themselves are easy to guess"
+msgstr "Namen en achternamen op zichzelf zijn makkelijk te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Common names and surnames are easy to guess"
+msgstr "Veelvoorkomende namen en achternamen zijn makkelijk te raden"
+
+# zxcvbn suggestions
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Use a few words, avoid common phrases"
+msgstr "Gebruik meerdere woorden, vermijd bekende zinnen"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr "Symbolen, cijfers of hoofdletters zijn niet nodig"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Add another word or two. Uncommon words are better."
+msgstr "Voeg nog een of twee woorden toe. Ongebruikelijke woorden zijn beter."
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid repeated words and characters"
+msgstr "Vermijd herhaalde woorden en tekens"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid sequences"
+msgstr "Vermijd reeksen"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid recent years"
+msgstr "Vermijd recente jaartallen"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid years that are associated with you"
+msgstr "Vermijd jaartallen die met jou geassocieerd worden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid dates and years that are associated with you"
+msgstr "Vermijd datums en jaartallen die met jou geassocieerd worden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Capitalization doesn't help very much"
+msgstr "Hoofdletters gebruiken helpt nauwelijks"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr "Alleen hoofdletters is bijna net zo makkelijk te raden als alleen kleine letters"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Reversed words aren't much harder to guess"
+msgstr "Omgekeerde woorden zijn niet veel moeilijker te raden"
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr "Voorspelbare vervangingen zoals '@' in plaats van 'a' helpen nauwelijks"
+
+# Onboarding / welcome email
+#. translators: %s: site name
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Welcome to %s!"
+msgstr "Welkom bij %s!"
+
+#. translators: %s: user login
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Welcome %s,"
+msgstr "Welkom %s,"
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Your account has been activated."
+msgstr "Je account is geactiveerd."
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Use the link below to set a password and log in:"
+msgstr "Gebruik onderstaande link om een wachtwoord in te stellen en in te loggen:"
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "For security reasons, this link is valid for a limited time only."
+msgstr "Om veiligheidsredenen is deze link slechts korte tijd geldig."
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Thanks!"
+msgstr "Bedankt!"

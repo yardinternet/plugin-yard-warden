@@ -1,0 +1,208 @@
+# Copyright (C) 2026 Yard | Digital Agency
+# This file is distributed under the GPLv2 or later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Yard Warden 0.1.0\n"
+"Report-Msgid-Bugs-To: https://www.yard.nl\n"
+"POT-Creation-Date: 2026-04-16T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: yard_warden\n"
+
+#. Plugin Name of the plugin
+#: yard-warden.php
+msgid "Yard Warden"
+msgstr ""
+
+#. Description of the plugin
+#: yard-warden.php
+msgid "Enhanced password and login security for WordPress (Bedrock/Acorn friendly)."
+msgstr ""
+
+#: src/Login/LoginServiceProvider.php:52
+msgid "Invalid credentials."
+msgstr ""
+
+#: src/Login/LostPasswordServiceProvider.php:72
+msgid "If an account with this username or email address exists, you will receive an email with a link to reset your password."
+msgstr ""
+
+#. translators: %d: minimum password length
+#: src/Password/StrengthValidator.php:46
+msgid "Password must be at least %d characters."
+msgstr ""
+
+#: src/Password/StrengthValidator.php:56
+msgid "This password is too easy to guess."
+msgstr ""
+
+#. translators: %d: minimum password length
+#: src/Password/PasswordUIServiceProvider.php:50
+msgid "At least %d characters."
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:53
+msgid "Too short"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:55
+msgid "Very weak"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:56
+msgid "Weak"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:57
+msgid "Fair"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:58
+msgid "Strong"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:59
+msgid "Very strong"
+msgstr ""
+
+# zxcvbn warnings
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Straight rows of keys are easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Short keyboard patterns are easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Use a longer keyboard pattern with more turns"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Recent years are easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Dates are often easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is a top-10 common password"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is a top-100 common password"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is a very common password"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "This is similar to a commonly used password"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "A word by itself is easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Names and surnames by themselves are easy to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Common names and surnames are easy to guess"
+msgstr ""
+
+# zxcvbn suggestions
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Use a few words, avoid common phrases"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Add another word or two. Uncommon words are better."
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid repeated words and characters"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid sequences"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid recent years"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid years that are associated with you"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Avoid dates and years that are associated with you"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Capitalization doesn't help very much"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Reversed words aren't much harder to guess"
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr ""
+
+# Onboarding / welcome email
+#. translators: %s: site name
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Welcome to %s!"
+msgstr ""
+
+#. translators: %s: user login
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Welcome %s,"
+msgstr ""
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Your account has been activated."
+msgstr ""
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Use the link below to set a password and log in:"
+msgstr ""
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "For security reasons, this link is valid for a limited time only."
+msgstr ""
+
+#: src/Onboarding/OnboardingServiceProvider.php
+msgid "Thanks!"
+msgstr ""
