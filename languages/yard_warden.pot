@@ -21,7 +21,7 @@ msgstr ""
 
 #. Description of the plugin
 #: yard-warden.php
-msgid "Enhanced password and login security for WordPress (Bedrock/Acorn friendly)."
+msgid "Enhanced password and login security for WordPress."
 msgstr ""
 
 #: src/Login/LoginServiceProvider.php:52
@@ -30,6 +30,27 @@ msgstr ""
 
 #: src/Login/LostPasswordServiceProvider.php:72
 msgid "If an account with this username or email address exists, you will receive an email with a link to reset your password."
+msgstr ""
+
+# Rate limiting
+#: src/RateLimit/RateLimitServiceProvider.php
+msgid "Too many failed login attempts. Please try again later."
+msgstr ""
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "Rate Limiting"
+msgstr ""
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "If a legitimate user has been locked out due to too many failed login attempts, you can clear all rate limits below."
+msgstr ""
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "Clear All Rate Limits"
+msgstr ""
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "All rate limits have been cleared."
 msgstr ""
 
 #. translators: %d: minimum password length

@@ -1,6 +1,6 @@
 {
   "name": "plugin/yard-warden",
-  "description": "Enhanced password and login security for WordPress (Bedrock/Acorn friendly).",
+  "description": "Enhanced password and login security for WordPress.",
   "homepage": "https://www.yard.nl",
   "type": "wordpress-plugin",
   "repositories": [

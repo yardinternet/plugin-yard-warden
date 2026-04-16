@@ -8,8 +8,8 @@ declare(strict_types=1);
  * @author  Yard | Digital Agency
  *
  * Plugin Name: Yard Warden
- * Description: Enhanced password and login security for WordPress (Bedrock/Acorn friendly).
- * Version: 0.1.0
+ * Description: Enhanced password and login security for WordPress.
+ * Version: 0.1.1
  * Author: Yard | Digital Agency
  * Author URI: https://www.yard.nl
  * License: GPLv2 or later
@@ -27,7 +27,7 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-define('YARD_WARDEN_VERSION', '0.1.0');
+define('YARD_WARDEN_VERSION', '0.1.1');
 define('YARD_WARDEN_REQUIRED_WP_VERSION', '6.0');
 define('YARD_WARDEN_PLUGIN_NAME', basename(__DIR__));
 define('YARD_WARDEN_PLUGIN_FILE', __FILE__);

@@ -1,6 +1,6 @@
 # Yard Warden
 
-Enhanced password and login security for WordPress (Bedrock/Acorn friendly).
+Enhanced password and login security for WordPress.
 
 ## Features
 

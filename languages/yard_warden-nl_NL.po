@@ -1,61 +1,22 @@
-# Dutch translation for Yard Warden.
-# Copyright (C) 2026 Yard | Digital Agency
 msgid ""
 msgstr ""
 "Project-Id-Version: Yard Warden 0.1.0\n"
 "Report-Msgid-Bugs-To: https://www.yard.nl\n"
-"POT-Creation-Date: 2026-04-15T00:00:00+00:00\n"
-"PO-Revision-Date: 2026-04-15T00:00:00+00:00\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Team: Dutch\n"
+"POT-Creation-Date: 2026-04-15T00:00:00+00:00\n"
+"PO-Revision-Date: 2026-04-15T00:00:00+00:00\n"
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: yard_warden\n"
 
+#. Plugin Name of the plugin
 #: yard-warden.php
 msgid "Yard Warden"
 msgstr "Yard Warden"
-
-#: yard-warden.php
-msgid "Enhanced password and login security for WordPress (Bedrock/Acorn friendly)."
-msgstr "Verbeterde wachtwoord- en loginbeveiliging voor WordPress (Bedrock/Acorn-compatibel)."
-
-#: src/ACF.php:61
-msgid "Settings"
-msgstr "Instellingen"
-
-#: src/ACF.php:65
-msgid "Minimum password length"
-msgstr "Minimum wachtwoordlengte"
-
-#: src/ACF.php:68
-msgid "Minimum number of characters a password must contain."
-msgstr "Minimaal aantal tekens dat een wachtwoord moet bevatten."
-
-#: src/ACF.php:76
-msgid "Minimum zxcvbn score"
-msgstr "Minimum zxcvbn score"
-
-#: src/ACF.php:79
-msgid "Higher score means harder to guess. 3 is safe, 4 is very strong."
-msgstr "Hogere score betekent moeilijker te raden. 3 is veilig, 4 is zeer sterk."
-
-#. translators: %d: zxcvbn score number
-#: src/ACF.php:83
-msgid "%d — somewhat guessable"
-msgstr "%d — enigszins te raden"
-
-#. translators: %d: zxcvbn score number
-#: src/ACF.php:88
-msgid "%d — safely unguessable (recommended)"
-msgstr "%d — moeilijk te raden (aanbevolen)"
-
-#. translators: %d: zxcvbn score number
-#: src/ACF.php:93
-msgid "%d — very unguessable"
-msgstr "%d — zeer moeilijk te raden"
 
 #: src/Login/LoginServiceProvider.php:52
 msgid "Invalid credentials."
@@ -102,15 +63,15 @@ msgstr "Zeer sterk"
 # zxcvbn warnings
 #: src/Password/PasswordUIServiceProvider.php
 msgid "Straight rows of keys are easy to guess"
-msgstr "Rechte rijen toetsen zijn makkelijk te raden"
+msgstr "Opvolgende rijen toetsen zijn makkelijk te raden"
 
 #: src/Password/PasswordUIServiceProvider.php
 msgid "Short keyboard patterns are easy to guess"
-msgstr "Korte toetsenbordpatronen zijn makkelijk te raden"
+msgstr "Korte toetsenpatronen zijn makkelijk te raden"
 
 #: src/Password/PasswordUIServiceProvider.php
 msgid "Use a longer keyboard pattern with more turns"
-msgstr "Gebruik een langer toetsenbordpatroon met meer wendingen"
+msgstr "Gebruik een langer toetsenpatroon met meer afwisseling"
 
 #: src/Password/PasswordUIServiceProvider.php
 msgid "Repeats like \"aaa\" are easy to guess"
@@ -235,3 +196,33 @@ msgstr "Om veiligheidsredenen is deze link slechts korte tijd geldig."
 #: src/Onboarding/OnboardingServiceProvider.php
 msgid "Thanks!"
 msgstr "Bedankt!"
+
+#: src/Login/LostPasswordServiceProvider.php:72
+msgid "If an account with this username or email address exists, you will receive an email with a link to reset your password."
+msgstr "Als een account met deze gebruikersnaam of email bestaat, ontvang je een email met een wachtwoord reset link."
+
+# Rate limiting
+#: src/RateLimit/RateLimitServiceProvider.php
+msgid "Too many failed login attempts. Please try again later."
+msgstr "Te veel foutive login pogingen. Probeer het later nogmaals."
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "Rate Limiting"
+msgstr "Limiteer loginbeveiliging"
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "If a legitimate user has been locked out due to too many failed login attempts, you can clear all rate limits below."
+msgstr "Als legitieme gebruikers zijn geblokeerd zijn door teveel foutieve login pogingen, kan je hier alle limietcounters resetten."
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "Clear All Rate Limits"
+msgstr "Reset alle login limieten"
+
+#: src/RateLimit/RateLimitAdminPage.php
+msgid "All rate limits have been cleared."
+msgstr "Alle login limieten zijn reset."
+
+#. Description of the plugin
+#: yard-warden.php
+msgid "Enhanced password and login security for WordPress."
+msgstr ""
