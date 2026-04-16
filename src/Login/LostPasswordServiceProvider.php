@@ -39,7 +39,6 @@ class LostPasswordServiceProvider
 			return;
 		}
 
-		// Let WordPress handle genuinely empty input.
 		if ($errors->get_error_message('empty_username')) {
 			return;
 		}
