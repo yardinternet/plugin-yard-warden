@@ -8,7 +8,7 @@ Enhanced password and login security for WordPress.
 - **Minimum length** enforcement (default 16) on top of the zxcvbn score.
 - **Generic login errors** to prevent username enumeration on the wp-login form. Always on — no toggle. Only applies to authentication failures; password-reset and profile-update validation errors remain verbose so users can correct their input.
 - **Safer multisite onboarding.** Auto-activates new signups server-side so no activation link is emailed and the `wp-activate.php` landing page (which would print username + plaintext password) is never reached. The welcome email is rewritten to contain a one-time password-reset link instead of a generated password.
-- **Rate limiting**
+- **Login limiting** via transient-based counters across three dimensions (IP+Username, IP, Username). Locks out brute-force attempts. Admin can clear all counters via Settings > Yard Warden.
 
 ## Hooks
 

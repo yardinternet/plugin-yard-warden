@@ -34,11 +34,10 @@ class LoginServiceProvider
 
 	/**
 	 * @param WP_Error|\WP_User|null $user
-	 * @param string $username
 	 *
 	 * @return WP_Error|\WP_User|null
 	 */
-	public function filterAuthenticateErrors($user, $username)
+	public function filterAuthenticateErrors($user)
 	{
 		if (! $user instanceof WP_Error) {
 			return $user;

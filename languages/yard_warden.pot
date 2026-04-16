@@ -32,25 +32,25 @@ msgstr ""
 msgid "If an account with this username or email address exists, you will receive an email with a link to reset your password."
 msgstr ""
 
-# Rate limiting
-#: src/RateLimit/RateLimitServiceProvider.php
+# Login limiting
+#: src/LimitLogin/LimitLoginServiceProvider.php
 msgid "Too many failed login attempts. Please try again later."
 msgstr ""
 
-#: src/RateLimit/RateLimitAdminPage.php
-msgid "Rate Limiting"
+#: src/LimitLogin/LimitLoginAdminPage.php
+msgid "Login Limiting"
 msgstr ""
 
-#: src/RateLimit/RateLimitAdminPage.php
-msgid "If a legitimate user has been locked out due to too many failed login attempts, you can clear all rate limits below."
+#: src/LimitLogin/LimitLoginAdminPage.php
+msgid "If a legitimate user has been locked out due to too many failed login attempts, you can clear all login limits below."
 msgstr ""
 
-#: src/RateLimit/RateLimitAdminPage.php
-msgid "Clear All Rate Limits"
+#: src/LimitLogin/LimitLoginAdminPage.php
+msgid "Clear All Login Limits"
 msgstr ""
 
-#: src/RateLimit/RateLimitAdminPage.php
-msgid "All rate limits have been cleared."
+#: src/LimitLogin/LimitLoginAdminPage.php
+msgid "All login limits have been cleared."
 msgstr ""
 
 #. translators: %d: minimum password length
