@@ -57,11 +57,17 @@ class PasswordUIServiceProvider
 			'minScore' => $minScore,
 			'strings' => [
 				'hint' => sprintf(
-					/* translators: %d: minimum password length */
-					__('At least %d characters.', YARD_WARDEN_TEXT_DOMAIN),
-					$minLength
+					__('Use at least %1$d characters and a strength of %2$d/%3$d.', YARD_WARDEN_TEXT_DOMAIN),
+					$minLength,
+					$minScore,
+					4
 				),
 				'tooShort' => __('Too short', YARD_WARDEN_TEXT_DOMAIN),
+				'requiredScore' => sprintf(
+					__('Minimum strength: %1$d/%2$d.', YARD_WARDEN_TEXT_DOMAIN),
+					$minScore,
+					4
+				),
 				'scoreLabels' => [
 					__('Very weak', YARD_WARDEN_TEXT_DOMAIN),
 					__('Weak', YARD_WARDEN_TEXT_DOMAIN),

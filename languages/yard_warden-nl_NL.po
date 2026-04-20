@@ -31,32 +31,37 @@ msgstr "Wachtwoord moet minimaal %d tekens lang zijn."
 msgid "This password is too easy to guess."
 msgstr "Dit wachtwoord is te makkelijk te raden."
 
-#. translators: %d: minimum password length
+#. translators: 1: minimum password length, 2: required password score, 3: maximum password score
 #: src/Password/PasswordUIServiceProvider.php:50
-msgid "At least %d characters."
-msgstr "Minimaal %d tekens."
+msgid "Use at least %1$d characters and a strength of %2$d/%3$d."
+msgstr "Gebruik minimaal %1$d tekens en zorg voor een sterkte van %2$d/%3$d."
 
 #: src/Password/PasswordUIServiceProvider.php:53
 msgid "Too short"
 msgstr "Te kort"
 
+#. translators: 1: required password score, 2: maximum password score
 #: src/Password/PasswordUIServiceProvider.php:55
+msgid "Minimum strength: %1$d/%2$d."
+msgstr "Minimale sterkte: %1$d/%2$d."
+
+#: src/Password/PasswordUIServiceProvider.php:60
 msgid "Very weak"
 msgstr "Zeer zwak"
 
-#: src/Password/PasswordUIServiceProvider.php:56
+#: src/Password/PasswordUIServiceProvider.php:61
 msgid "Weak"
 msgstr "Zwak"
 
-#: src/Password/PasswordUIServiceProvider.php:57
+#: src/Password/PasswordUIServiceProvider.php:62
 msgid "Fair"
 msgstr "Redelijk"
 
-#: src/Password/PasswordUIServiceProvider.php:58
+#: src/Password/PasswordUIServiceProvider.php:63
 msgid "Strong"
 msgstr "Sterk"
 
-#: src/Password/PasswordUIServiceProvider.php:59
+#: src/Password/PasswordUIServiceProvider.php:64
 msgid "Very strong"
 msgstr "Zeer sterk"
 
@@ -225,4 +230,4 @@ msgstr "Alle login limieten zijn reset."
 #. Description of the plugin
 #: yard-warden.php
 msgid "Enhanced password and login security for WordPress."
-msgstr ""
+msgstr "Verbeterde wachtwoord- en inlogbeveiliging voor WordPress."

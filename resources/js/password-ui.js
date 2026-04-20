@@ -20,6 +20,9 @@
 	const PASSWORD_SELECTORS = ['#pass1', '#pass1-text', '#user_pass'];
 	const USER_INPUT_SELECTORS = [
 		'#user_login',
+		'input[name="user_login"]',
+		'#rp_login',
+		'input[name="rp_login"]',
 		'#email',
 		'#user_email',
 		'#display_name',
@@ -28,10 +31,10 @@
 	];
 
 	function collectUserInputs() {
-		return USER_INPUT_SELECTORS
+		return [...new Set(USER_INPUT_SELECTORS
 			.map((sel) => document.querySelector(sel))
 			.filter((el) => el && el.value)
-			.map((el) => el.value);
+			.map((el) => el.value))];
 	}
 
 	function translate(dictKey, text) {
@@ -62,11 +65,15 @@
 			return '';
 		}
 		if (length < cfg.minLength) {
-			return `${cfg.strings.tooShort} (${length}/${cfg.minLength})`;
+			return `${cfg.strings.tooShort} (${length}/${cfg.minLength}) - ${cfg.strings.hint}`;
 		}
 
 		const label = cfg.strings.scoreLabels[result.score] || '';
 		const parts = [`${label} (${result.score}/4)`];
+
+		if (result.score < cfg.minScore) {
+			parts.push(cfg.strings.requiredScore);
+		}
 
 		if (result.feedback && result.feedback.warning) {
 			parts.push(translate('warnings', result.feedback.warning));

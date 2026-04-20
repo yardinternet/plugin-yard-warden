@@ -62,32 +62,37 @@ msgstr ""
 msgid "This password is too easy to guess."
 msgstr ""
 
-#. translators: %d: minimum password length
+#. translators: 1: minimum password length, 2: required password score, 3: maximum password score
 #: src/Password/PasswordUIServiceProvider.php:50
-msgid "At least %d characters."
+msgid "Use at least %1$d characters and a strength of %2$d/%3$d."
 msgstr ""
 
 #: src/Password/PasswordUIServiceProvider.php:53
 msgid "Too short"
 msgstr ""
 
+#. translators: 1: required password score, 2: maximum password score
 #: src/Password/PasswordUIServiceProvider.php:55
+msgid "Minimum strength: %1$d/%2$d."
+msgstr ""
+
+#: src/Password/PasswordUIServiceProvider.php:60
 msgid "Very weak"
 msgstr ""
 
-#: src/Password/PasswordUIServiceProvider.php:56
+#: src/Password/PasswordUIServiceProvider.php:61
 msgid "Weak"
 msgstr ""
 
-#: src/Password/PasswordUIServiceProvider.php:57
+#: src/Password/PasswordUIServiceProvider.php:62
 msgid "Fair"
 msgstr ""
 
-#: src/Password/PasswordUIServiceProvider.php:58
+#: src/Password/PasswordUIServiceProvider.php:63
 msgid "Strong"
 msgstr ""
 
-#: src/Password/PasswordUIServiceProvider.php:59
+#: src/Password/PasswordUIServiceProvider.php:64
 msgid "Very strong"
 msgstr ""
 
