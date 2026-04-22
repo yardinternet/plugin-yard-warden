@@ -2,7 +2,7 @@
  * Yard Warden — password UI.
  *
  * Replaces WP's default password hint and strength indicator with zxcvbn-backed
- * feedback that matches the server-side StrengthValidator. Vanilla ES2018+.
+ * feedback that matches the server-side StrengthValidator.
  */
 (function () {
 	'use strict';
@@ -31,10 +31,13 @@
 	];
 
 	function collectUserInputs() {
-		return [...new Set(USER_INPUT_SELECTORS
-			.map((sel) => document.querySelector(sel))
-			.filter((el) => el && el.value)
-			.map((el) => el.value))];
+		return [
+			...new Set(
+				USER_INPUT_SELECTORS.map((sel) => document.querySelector(sel))
+					.filter((el) => el && el.value)
+					.map((el) => el.value),
+			),
+		];
 	}
 
 	function translate(dictKey, text) {
@@ -127,7 +130,7 @@
 			setResultState(
 				resultEl,
 				scoreClass(result.score, value.length),
-				formatFeedback(result, value)
+				formatFeedback(result, value),
 			);
 		};
 
