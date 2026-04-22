@@ -16,7 +16,6 @@
   "require": {
     "php": "7.4.* || 8.2.*",
     "yard/logger": "^1.0",
-    "wpengine/advanced-custom-fields-pro": "^6.7",
     "bjeavons/zxcvbn-php": "^1.3"
   },
   "require-dev": {
