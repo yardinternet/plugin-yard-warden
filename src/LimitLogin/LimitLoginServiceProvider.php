@@ -36,7 +36,8 @@ class LimitLoginServiceProvider
     {
         // Priority 30: after core auth at 20, so a valid-credential WP_User gets
         // overwritten with our lockout error. Same priority as LoginServiceProvider
-        // but registered before it — and it only rewrites leaky codes, not ours.
+        // but registered after it — LoginServiceProvider only rewrites leaky codes,
+        // not our too_many_attempts code, so our response is the final value.
         add_filter('authenticate', [$this, 'checkLockout'], 30, 2);
         add_action('wp_login_failed', [$this, 'recordFailedAttempt'], 10, 2);
         add_action('wp_login', [$this, 'onSuccessfulLogin'], 10, 1);
@@ -55,7 +56,13 @@ class LimitLoginServiceProvider
             return $user;
         }
 
-        if (empty($username)) {
+        if ('' === $username) {
+            return $user;
+        }
+
+        $username = $this->sanitizeUsername($username);
+
+        if ('' === $username) {
             return $user;
         }
 
@@ -72,7 +79,7 @@ class LimitLoginServiceProvider
 
                 if (defined('XMLRPC_REQUEST') && XMLRPC_REQUEST && ! headers_sent()) {
                     header('HTTP/1.1 429 Too Many Requests');
-                    header('Retry-After: 300');
+                    header('Retry-After: ' . $this->lockoutDuration($dimension, $ip, $username));
                 }
 
                 return new WP_Error(self::ERROR_CODE, $this->errorMessage());
@@ -149,7 +156,7 @@ class LimitLoginServiceProvider
     }
 
     /**
-     * Decrement IP+Username and IP counters on successful login.
+     * Clear all counters on successful login.
      *
      * @param string $username
      */
@@ -168,9 +175,10 @@ class LimitLoginServiceProvider
 
         $this->limiter->clear('ip_user', $ip . '|' . $username);
         $this->limiter->clear('ip', $ip);
+        $this->limiter->clear('username', $username);
 
         Log::debug(sprintf(
-            'Yard Warden: login success, cleared ip_user and ip counters for %s from %s',
+            'Yard Warden: login success, cleared ip_user, ip, and username counters for %s from %s',
             $username,
             $ip
         ));

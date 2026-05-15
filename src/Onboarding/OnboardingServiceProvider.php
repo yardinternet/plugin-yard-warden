@@ -150,7 +150,7 @@ class OnboardingServiceProvider
 
 	private function welcomeEmailDisabled(): bool
 	{
-		return ! empty($_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY]);
+		return isset($_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY]) && '' !== $_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY];
 	}
 
 	private function getPasswordResetKey(WP_User $user): string
