@@ -22,6 +22,13 @@ Enhanced password and login security for WordPress.
 | `yard::warden/login/leaky-error-codes` | `['invalid_username', 'invalid_email', 'incorrect_password']` | WP_Error codes to rewrite. |
 | `yard::warden/onboarding/welcome-subject` | `Welcome to <site>!` | Multisite welcome email subject. |
 | `yard::warden/onboarding/welcome-body` | reset-link body | Full welcome email body. Receives `$user`, `$resetUrl`, original body. |
+| `yard::warden/limit-login/enabled` | `true` | Set to `false` to disable login limiting entirely. |
+| `yard::warden/limit-login/client-ip` | `REMOTE_ADDR` | Override IP detection (e.g. for reverse proxies). |
+| `yard::warden/limit-login/error-message` | `Too many failed login attempts…` | Lockout error shown to the user. |
+| `yard::warden/limit-login/skip-error-codes` | `['expired_session']` | WP_Error codes that do not count as failed attempts. |
+| `yard::warden/limit-login/threshold/{dimension}` | `5` / `50` / `3` | Attempts before lockout per dimension (`ip_user` / `ip` / `username`). |
+| `yard::warden/limit-login/window/{dimension}` | `300` / `3600` / `1500` | Counting window in seconds per dimension. |
+| `yard::warden/limit-login/lockout/{dimension}` | `300` / `3600` / `1500` | Lockout duration in seconds per dimension. |
 
 ## Policy override example
 
