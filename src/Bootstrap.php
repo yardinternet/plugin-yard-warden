@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Yard\Warden;
 
-use Yard\Warden\Login\LoginServiceProvider;
-use Yard\Warden\Login\LostPasswordServiceProvider;
-use Yard\Warden\Onboarding\OnboardingServiceProvider;
 use Yard\Warden\LimitLogin\Limiter;
 use Yard\Warden\LimitLogin\LimitLoginAdminPage;
 use Yard\Warden\LimitLogin\LimitLoginServiceProvider;
+use Yard\Warden\Login\LoginServiceProvider;
+use Yard\Warden\Login\LostPasswordServiceProvider;
+use Yard\Warden\Onboarding\OnboardingServiceProvider;
 use Yard\Warden\Password\PasswordServiceProvider;
 use Yard\Warden\Password\PasswordUIServiceProvider;
 use Yard\Warden\Password\StrengthValidator;
