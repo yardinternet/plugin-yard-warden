@@ -18,9 +18,6 @@ class LoginServiceProvider
 	public const LEAKY_ERROR_CODES_FILTER = 'yard::warden/login/leaky-error-codes';
 	public const GENERIC_ERROR_FILTER = 'yard::warden/login/generic-error';
 
-	/**
-	 * @var string[]
-	 */
 	private const DEFAULT_LEAKY_CODES = [
 		'invalid_username',
 		'invalid_email',
@@ -34,10 +31,11 @@ class LoginServiceProvider
 
 	/**
 	 * @param WP_Error|\WP_User|null $user
+	 * @param string $username
 	 *
 	 * @return WP_Error|\WP_User|null
 	 */
-	public function filterAuthenticateErrors($user)
+	public function filterAuthenticateErrors($user, $username)
 	{
 		if (! $user instanceof WP_Error) {
 			return $user;
