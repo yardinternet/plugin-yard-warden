@@ -84,12 +84,12 @@ public function setLockout(string $dimension, string $identifier, int $durationS
 
 	protected function key(string $dimension, string $identifier): string
 	{
-		return self::KEY_PREFIX . $dimension . ':' . md5($identifier);
+		return self::KEY_PREFIX . $dimension . ':' . hash_hmac('sha256', $identifier, wp_salt('auth'));
 	}
 
 	protected function lockKey(string $dimension, string $identifier): string
 	{
-		return self::LOCK_PREFIX . $dimension . ':' . md5($identifier);
+		return self::LOCK_PREFIX . $dimension . ':' . hash_hmac('sha256', $identifier, wp_salt('auth'));
 	}
 
 }
