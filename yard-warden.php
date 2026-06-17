@@ -16,6 +16,7 @@ declare(strict_types=1);
  * Text Domain: yard_warden
  * Domain Path: /languages
  * Requires at least: 6.0
+ * Requires PHP: 7.4
  */
 
 use Yard\Logging\Log;

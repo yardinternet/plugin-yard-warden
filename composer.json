@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "php": "7.4.* || 8.2.*",
+    "php": ">=7.4",
     "yard/logger": "^1.0",
     "bjeavons/zxcvbn-php": "^1.3"
   },
