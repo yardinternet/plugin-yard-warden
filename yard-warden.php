@@ -7,7 +7,7 @@ declare(strict_types=1);
  *
  * @author  Yard | Digital Agency
  *
- * Plugin Name: Yard Warden
+ * Plugin Name: Yard | Warden
  * Description: Enhanced password and login security for WordPress.
  * Version: 1.0.2
  * Author: Yard | Digital Agency
