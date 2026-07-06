@@ -51,7 +51,7 @@ class Limiter
 		delete_transient($this->lockKey($dimension, $identifier));
 	}
 
-public function setLockout(string $dimension, string $identifier, int $durationSeconds): void
+	public function setLockout(string $dimension, string $identifier, int $durationSeconds): void
 	{
 		set_transient(
 			$this->lockKey($dimension, $identifier),
@@ -91,5 +91,4 @@ public function setLockout(string $dimension, string $identifier, int $durationS
 	{
 		return self::LOCK_PREFIX . $dimension . ':' . hash_hmac('sha256', $identifier, wp_salt('auth'));
 	}
-
 }
