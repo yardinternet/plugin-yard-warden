@@ -35,7 +35,7 @@ class LostPasswordServiceProvider
 	 */
 	public function suppressUserNotFoundLeak(WP_Error $errors, $user_data): void
 	{
-		if ($user_data instanceof WP_User) {
+		if ($user_data instanceof WP_User && wp_is_password_reset_allowed_for_user($user_data)) {
 			return;
 		}
 
