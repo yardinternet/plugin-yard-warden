@@ -9,6 +9,13 @@ use WP_User;
 use Yard\Logging\Log;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Wires the login attempt Limiter into WordPress's login lifecycle to enforce
  * brute-force protection across three dimensions (IP+Username, IP, Username).
  */
@@ -197,7 +204,7 @@ class LimitLoginServiceProvider
 	private function clientIp(): string
 	{
 		$ip = isset($_SERVER['REMOTE_ADDR'])
-			? filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP, ['options' => ['default' => '']])
+			? filter_var(wp_unslash($_SERVER['REMOTE_ADDR']), FILTER_VALIDATE_IP, ['options' => ['default' => '']])
 			: '';
 
 		return (string) apply_filters(self::FILTER_CLIENT_IP, $ip);

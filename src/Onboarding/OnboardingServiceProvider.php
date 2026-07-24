@@ -9,6 +9,13 @@ use WP_User;
 use Yard\Logging\Log;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Removes plaintext passwords from the multisite user-onboarding flow.
  *
  *   1. Activate new signups server-side immediately so the user never receives
@@ -150,6 +157,8 @@ class OnboardingServiceProvider
 
 	private function welcomeEmailDisabled(): bool
 	{
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only opt-out
+		// flag (e.g. a bulk-import query param), doesn't change any state itself.
 		return isset($_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY]) && '' !== $_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY];
 	}
 

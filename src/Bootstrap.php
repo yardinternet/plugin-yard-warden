@@ -25,24 +25,9 @@ class Bootstrap
 {
 	public static function bootstrap(): void
 	{
-		self::registerPluginTextDomain();
 		self::registerPasswordProviders();
 		self::registerLoginProviders();
 		self::registerOnboardingProviders();
-	}
-
-	private static function registerPluginTextDomain(): void
-	{
-		\add_action('init', [self::class, 'loadPluginTextDomain']);
-	}
-
-	public static function loadPluginTextDomain(): void
-	{
-		\load_plugin_textdomain(
-			'yard-warden',
-			false,
-			YARD_WARDEN_PLUGIN_NAME . '/languages/'
-		);
 	}
 
 	private static function registerPasswordProviders(): void
