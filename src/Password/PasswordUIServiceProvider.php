@@ -64,16 +64,16 @@ class PasswordUIServiceProvider
 			'minScore' => $minScore,
 			'maxScore' => StrengthValidator::MAX_SCORE,
 			'strings' => [
-				/* translators: 1: minimum password length, 2: minimum password strength score, 3: maximum password strength score */
 				'hint' => sprintf(
+					/* translators: 1: minimum password length, 2: minimum password strength score, 3: maximum password strength score */
 					__('Use at least %1$d characters and a strength of %2$d/%3$d.', 'yard-warden'),
 					$minLength,
 					$minScore,
 					StrengthValidator::MAX_SCORE
 				),
 				'tooShort' => __('Too short', 'yard-warden'),
-				/* translators: 1: minimum password strength score, 2: maximum password strength score */
 				'requiredScore' => sprintf(
+					/* translators: 1: minimum password strength score, 2: maximum password strength score */
 					__('Minimum strength: %1$d/%2$d.', 'yard-warden'),
 					$minScore,
 					StrengthValidator::MAX_SCORE

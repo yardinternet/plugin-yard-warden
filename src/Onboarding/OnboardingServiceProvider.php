@@ -157,8 +157,7 @@ class OnboardingServiceProvider
 
 	private function welcomeEmailDisabled(): bool
 	{
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only opt-out
-		// flag (e.g. a bulk-import query param), doesn't change any state itself.
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only opt-out flag (e.g. a bulk-import query param), doesn't change any state itself.
 		return isset($_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY]) && '' !== $_REQUEST[self::DISABLE_WELCOME_REQUEST_KEY];
 	}
 
