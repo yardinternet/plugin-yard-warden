@@ -7,6 +7,13 @@ namespace Yard\Warden\Login;
 use WP_Error;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Hardens login by replacing enumeration-friendly errors with a generic message.
  *
  * Only authentication errors are rewritten. Password-reset (rp) and

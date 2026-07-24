@@ -7,6 +7,13 @@ namespace Yard\Warden\Password;
 use WP_Error;
 use WP_User;
 
+/**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class PasswordServiceProvider
 {
 	private StrengthValidator $validator;
@@ -36,7 +43,13 @@ class PasswordServiceProvider
 
 	private function maybeAddValidationError(WP_Error $errors, $user): void
 	{
-		$password = (string) (wp_unslash($_POST['pass1']) ?? '');
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- fires from
+		// user_profile_update_errors / validate_password_reset, both only invoked
+		// by WP core after its own nonce check on the profile/reset-password form.
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitizing
+		// would mutate the value (trimmed/stripped) so the strength check would run against a
+		// different string than the password WP actually sets. Never stored or output as-is.
+		$password = isset($_POST['pass1']) ? (string) wp_unslash($_POST['pass1']) : '';
 
 		if ('' === $password) {
 			return;

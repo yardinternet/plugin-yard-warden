@@ -5,6 +5,13 @@ declare(strict_types=1);
 namespace Yard\Warden\Password;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Replaces WordPress's default password hint, strength indicator and
  * "Confirm use of weak password" checkbox on login / profile screens with a
  * zxcvbn-driven UI that mirrors the server-side StrengthValidator.

@@ -5,6 +5,13 @@ declare(strict_types=1);
 namespace Yard\Warden\LimitLogin;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Tracks failed login attempts via WordPress transients and enforces
  * lockouts when configurable thresholds are exceeded.
  *

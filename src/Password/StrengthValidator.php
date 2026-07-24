@@ -9,6 +9,13 @@ use WP_User;
 use ZxcvbnPhp\Zxcvbn;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Validates password strength using zxcvbn-php https://github.com/bjeavons/zxcvbn-php.
  */
 class StrengthValidator

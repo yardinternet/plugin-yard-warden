@@ -7,6 +7,13 @@ namespace Yard\Warden\LimitLogin;
 use Yard\Logging\Log;
 
 /**
+ * Exit when accessed directly.
+ */
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
  * Registers a native WordPress admin page under Settings > Yard Warden
  * with a button to clear all login-limit transients.
  */
@@ -78,6 +85,8 @@ class LimitLoginAdminPage
 			return;
 		}
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display
+		// flag set by our own redirect in handleClearRequest(), not a form submission.
 		if (isset($_GET['settings-updated'])) {
 			settings_errors(self::MENU_SLUG);
 		}

@@ -1,0 +1,13 @@
+.git
+.github
+.gitignore
+.gitattributes
+.distignore
+.editorconfig
+.markdownlint.yml
+.php-cs-fixer.php
+.php-cs-fixer.cache
+.phpunit.result.cache
+.DS_Store
+wp-content
+tests
