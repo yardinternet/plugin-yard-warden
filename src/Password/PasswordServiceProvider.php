@@ -36,7 +36,7 @@ class PasswordServiceProvider
 
 	private function maybeAddValidationError(WP_Error $errors, $user): void
 	{
-		$password = (string) ($_POST['pass1'] ?? '');
+		$password = (string) (wp_unslash($_POST['pass1']) ?? '');
 
 		if ('' === $password) {
 			return;

@@ -72,7 +72,7 @@
 		}
 
 		const label = cfg.strings.scoreLabels[result.score] || '';
-		const parts = [`${label} (${result.score}/4)`];
+		const parts = [`${label} (${result.score}/${cfg.maxScore})`];
 
 		if (result.score < cfg.minScore) {
 			parts.push(cfg.strings.requiredScore);

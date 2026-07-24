@@ -55,18 +55,21 @@ class PasswordUIServiceProvider
 		wp_localize_script(self::SCRIPT_HANDLE, 'YardWarden', [
 			'minLength' => $minLength,
 			'minScore' => $minScore,
+			'maxScore' => StrengthValidator::MAX_SCORE,
 			'strings' => [
+				/* translators: 1: minimum password length, 2: minimum password strength score, 3: maximum password strength score */
 				'hint' => sprintf(
 					__('Use at least %1$d characters and a strength of %2$d/%3$d.', 'yard-warden'),
 					$minLength,
 					$minScore,
-					4
+					StrengthValidator::MAX_SCORE
 				),
 				'tooShort' => __('Too short', 'yard-warden'),
+				/* translators: 1: minimum password strength score, 2: maximum password strength score */
 				'requiredScore' => sprintf(
 					__('Minimum strength: %1$d/%2$d.', 'yard-warden'),
 					$minScore,
-					4
+					StrengthValidator::MAX_SCORE
 				),
 				'scoreLabels' => [
 					__('Very weak', 'yard-warden'),
