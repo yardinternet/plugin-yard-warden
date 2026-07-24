@@ -32,8 +32,8 @@ class LimitLoginAdminPage
 	public function registerPage(): void
 	{
 		add_options_page(
-			__('Yard Warden', YARD_WARDEN_TEXT_DOMAIN),
-			__('Yard Warden', YARD_WARDEN_TEXT_DOMAIN),
+			__('Yard Warden', 'yard-warden'),
+			__('Yard Warden', 'yard-warden'),
 			'manage_options',
 			self::MENU_SLUG,
 			[$this, 'renderPage']
@@ -62,7 +62,7 @@ class LimitLoginAdminPage
 		add_settings_error(
 			self::MENU_SLUG,
 			'limits_cleared',
-			__('All login limits have been cleared.', YARD_WARDEN_TEXT_DOMAIN),
+			__('All login limits have been cleared.', 'yard-warden'),
 			'success'
 		);
 
@@ -84,16 +84,16 @@ class LimitLoginAdminPage
 
 		?>
         <div class="wrap">
-            <h1><?php esc_html_e('Yard Warden', YARD_WARDEN_TEXT_DOMAIN); ?></h1>
+            <h1><?php esc_html_e('Yard Warden', 'yard-warden'); ?></h1>
 
             <div class="card" style="max-width: 600px;">
-                <h2><?php esc_html_e('Login Limiting', YARD_WARDEN_TEXT_DOMAIN); ?></h2>
-                <p><?php esc_html_e('If a legitimate user has been locked out due to too many failed login attempts, you can clear all login limits below.', YARD_WARDEN_TEXT_DOMAIN); ?></p>
+                <h2><?php esc_html_e('Login Limiting', 'yard-warden'); ?></h2>
+                <p><?php esc_html_e('If a legitimate user has been locked out due to too many failed login attempts, you can clear all login limits below.', 'yard-warden'); ?></p>
 
                 <form method="post">
                     <?php wp_nonce_field(self::NONCE_ACTION); ?>
                     <?php submit_button(
-                    	__('Clear All Login Limits', YARD_WARDEN_TEXT_DOMAIN),
+                    	__('Clear All Login Limits', 'yard-warden'),
                     	'secondary',
                     	'yard_warden_clear_limit_login',
                     	false

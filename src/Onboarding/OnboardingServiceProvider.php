@@ -93,7 +93,7 @@ class OnboardingServiceProvider
 
 		$custom = sprintf(
 			/* translators: %s: site name */
-			__('Welcome to %s!', YARD_WARDEN_TEXT_DOMAIN),
+			__('Welcome to %s!', 'yard-warden'),
 			$siteName
 		);
 
@@ -175,18 +175,18 @@ class OnboardingServiceProvider
 		$lines = [
 			sprintf(
 				/* translators: %s: user login */
-				__('Welcome %s,', YARD_WARDEN_TEXT_DOMAIN),
+				__('Welcome %s,', 'yard-warden'),
 				$userLogin
 			),
 			'',
-			__('Your account has been activated.', YARD_WARDEN_TEXT_DOMAIN),
+			__('Your account has been activated.', 'yard-warden'),
 			'',
-			__('Use the link below to set a password and log in:', YARD_WARDEN_TEXT_DOMAIN),
+			__('Use the link below to set a password and log in:', 'yard-warden'),
 			$resetUrl,
 			'',
-			__('For security reasons, this link is valid for a limited time only.', YARD_WARDEN_TEXT_DOMAIN),
+			__('For security reasons, this link is valid for a limited time only.', 'yard-warden'),
 			'',
-			__('Thanks!', YARD_WARDEN_TEXT_DOMAIN),
+			__('Thanks!', 'yard-warden'),
 		];
 
 		return implode("\n", $lines);

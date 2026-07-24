@@ -68,7 +68,7 @@ class LostPasswordServiceProvider
 		$errors->remove('confirm');
 		$errors->add(
 			'confirm',
-			__('If an account with this username or email address exists, you will receive an email with a link to reset your password.', YARD_WARDEN_TEXT_DOMAIN),
+			__('If an account with this username or email address exists, you will receive an email with a link to reset your password.', 'yard-warden'),
 			'message'
 		);
 

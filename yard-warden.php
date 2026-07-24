@@ -13,7 +13,7 @@ declare(strict_types=1);
  * Author: Yard | Digital Agency
  * Author URI: https://www.yard.nl
  * License: GPLv2 or later
- * Text Domain: yard_warden
+ * Text Domain: yard-warden
  * Domain Path: /languages
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -34,7 +34,6 @@ define('YARD_WARDEN_PLUGIN_NAME', basename(__DIR__));
 define('YARD_WARDEN_PLUGIN_FILE', __FILE__);
 define('YARD_WARDEN_PLUGIN_URL', plugins_url('/', YARD_WARDEN_PLUGIN_FILE));
 define('YARD_WARDEN_PLUGIN_DIR_PATH', plugin_dir_path(YARD_WARDEN_PLUGIN_FILE));
-define('YARD_WARDEN_TEXT_DOMAIN', 'yard_warden');
 
 require_once __DIR__ . '/src/Bootstrap.php';
 

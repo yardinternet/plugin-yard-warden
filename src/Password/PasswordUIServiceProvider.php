@@ -57,23 +57,23 @@ class PasswordUIServiceProvider
 			'minScore' => $minScore,
 			'strings' => [
 				'hint' => sprintf(
-					__('Use at least %1$d characters and a strength of %2$d/%3$d.', YARD_WARDEN_TEXT_DOMAIN),
+					__('Use at least %1$d characters and a strength of %2$d/%3$d.', 'yard-warden'),
 					$minLength,
 					$minScore,
 					4
 				),
-				'tooShort' => __('Too short', YARD_WARDEN_TEXT_DOMAIN),
+				'tooShort' => __('Too short', 'yard-warden'),
 				'requiredScore' => sprintf(
-					__('Minimum strength: %1$d/%2$d.', YARD_WARDEN_TEXT_DOMAIN),
+					__('Minimum strength: %1$d/%2$d.', 'yard-warden'),
 					$minScore,
 					4
 				),
 				'scoreLabels' => [
-					__('Very weak', YARD_WARDEN_TEXT_DOMAIN),
-					__('Weak', YARD_WARDEN_TEXT_DOMAIN),
-					__('Fair', YARD_WARDEN_TEXT_DOMAIN),
-					__('Strong', YARD_WARDEN_TEXT_DOMAIN),
-					__('Very strong', YARD_WARDEN_TEXT_DOMAIN),
+					__('Very weak', 'yard-warden'),
+					__('Weak', 'yard-warden'),
+					__('Fair', 'yard-warden'),
+					__('Strong', 'yard-warden'),
+					__('Very strong', 'yard-warden'),
 				],
 			],
 			'zxcvbn' => $this->zxcvbnTranslations(),
@@ -91,63 +91,63 @@ class PasswordUIServiceProvider
 		return [
 			'warnings' => [
 				'Straight rows of keys are easy to guess' =>
-					__('Straight rows of keys are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Straight rows of keys are easy to guess', 'yard-warden'),
 				'Short keyboard patterns are easy to guess' =>
-					__('Short keyboard patterns are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Short keyboard patterns are easy to guess', 'yard-warden'),
 				'Use a longer keyboard pattern with more turns' =>
-					__('Use a longer keyboard pattern with more turns', YARD_WARDEN_TEXT_DOMAIN),
+					__('Use a longer keyboard pattern with more turns', 'yard-warden'),
 				'Repeats like "aaa" are easy to guess' =>
-					__('Repeats like "aaa" are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Repeats like "aaa" are easy to guess', 'yard-warden'),
 				'Repeats like "abcabcabc" are only slightly harder to guess than "abc"' =>
-					__('Repeats like "abcabcabc" are only slightly harder to guess than "abc"', YARD_WARDEN_TEXT_DOMAIN),
+					__('Repeats like "abcabcabc" are only slightly harder to guess than "abc"', 'yard-warden'),
 				'Sequences like abc or 6543 are easy to guess' =>
-					__('Sequences like abc or 6543 are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Sequences like abc or 6543 are easy to guess', 'yard-warden'),
 				'Recent years are easy to guess' =>
-					__('Recent years are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Recent years are easy to guess', 'yard-warden'),
 				'Dates are often easy to guess' =>
-					__('Dates are often easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Dates are often easy to guess', 'yard-warden'),
 				'This is a top-10 common password' =>
-					__('This is a top-10 common password', YARD_WARDEN_TEXT_DOMAIN),
+					__('This is a top-10 common password', 'yard-warden'),
 				'This is a top-100 common password' =>
-					__('This is a top-100 common password', YARD_WARDEN_TEXT_DOMAIN),
+					__('This is a top-100 common password', 'yard-warden'),
 				'This is a very common password' =>
-					__('This is a very common password', YARD_WARDEN_TEXT_DOMAIN),
+					__('This is a very common password', 'yard-warden'),
 				'This is similar to a commonly used password' =>
-					__('This is similar to a commonly used password', YARD_WARDEN_TEXT_DOMAIN),
+					__('This is similar to a commonly used password', 'yard-warden'),
 				'A word by itself is easy to guess' =>
-					__('A word by itself is easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('A word by itself is easy to guess', 'yard-warden'),
 				'Names and surnames by themselves are easy to guess' =>
-					__('Names and surnames by themselves are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Names and surnames by themselves are easy to guess', 'yard-warden'),
 				'Common names and surnames are easy to guess' =>
-					__('Common names and surnames are easy to guess', YARD_WARDEN_TEXT_DOMAIN),
+					__('Common names and surnames are easy to guess', 'yard-warden'),
 			],
 			'suggestions' => [
 				'Use a few words, avoid common phrases' =>
-					__('Use a few words, avoid common phrases', YARD_WARDEN_TEXT_DOMAIN),
+					__('Use a few words, avoid common phrases', 'yard-warden'),
 				'No need for symbols, digits, or uppercase letters' =>
-					__('No need for symbols, digits, or uppercase letters', YARD_WARDEN_TEXT_DOMAIN),
+					__('No need for symbols, digits, or uppercase letters', 'yard-warden'),
 				'Add another word or two. Uncommon words are better.' =>
-					__('Add another word or two. Uncommon words are better.', YARD_WARDEN_TEXT_DOMAIN),
+					__('Add another word or two. Uncommon words are better.', 'yard-warden'),
 				'Use a longer keyboard pattern with more turns' =>
-					__('Use a longer keyboard pattern with more turns', YARD_WARDEN_TEXT_DOMAIN),
+					__('Use a longer keyboard pattern with more turns', 'yard-warden'),
 				'Avoid repeated words and characters' =>
-					__('Avoid repeated words and characters', YARD_WARDEN_TEXT_DOMAIN),
+					__('Avoid repeated words and characters', 'yard-warden'),
 				'Avoid sequences' =>
-					__('Avoid sequences', YARD_WARDEN_TEXT_DOMAIN),
+					__('Avoid sequences', 'yard-warden'),
 				'Avoid recent years' =>
-					__('Avoid recent years', YARD_WARDEN_TEXT_DOMAIN),
+					__('Avoid recent years', 'yard-warden'),
 				'Avoid years that are associated with you' =>
-					__('Avoid years that are associated with you', YARD_WARDEN_TEXT_DOMAIN),
+					__('Avoid years that are associated with you', 'yard-warden'),
 				'Avoid dates and years that are associated with you' =>
-					__('Avoid dates and years that are associated with you', YARD_WARDEN_TEXT_DOMAIN),
+					__('Avoid dates and years that are associated with you', 'yard-warden'),
 				"Capitalization doesn't help very much" =>
-					__("Capitalization doesn't help very much", YARD_WARDEN_TEXT_DOMAIN),
+					__("Capitalization doesn't help very much", 'yard-warden'),
 				'All-uppercase is almost as easy to guess as all-lowercase' =>
-					__('All-uppercase is almost as easy to guess as all-lowercase', YARD_WARDEN_TEXT_DOMAIN),
+					__('All-uppercase is almost as easy to guess as all-lowercase', 'yard-warden'),
 				"Reversed words aren't much harder to guess" =>
-					__("Reversed words aren't much harder to guess", YARD_WARDEN_TEXT_DOMAIN),
+					__("Reversed words aren't much harder to guess", 'yard-warden'),
 				"Predictable substitutions like '@' instead of 'a' don't help very much" =>
-					__("Predictable substitutions like '@' instead of 'a' don't help very much", YARD_WARDEN_TEXT_DOMAIN),
+					__("Predictable substitutions like '@' instead of 'a' don't help very much", 'yard-warden'),
 			],
 		];
 	}

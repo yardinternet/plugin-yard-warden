@@ -59,7 +59,7 @@ class LoginServiceProvider
 	{
 		return (string) apply_filters(
 			self::GENERIC_ERROR_FILTER,
-			__('Invalid credentials.', YARD_WARDEN_TEXT_DOMAIN)
+			__('Invalid credentials.', 'yard-warden')
 		);
 	}
 }
