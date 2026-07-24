@@ -207,7 +207,7 @@ class LimitLoginServiceProvider
 	{
 		return (string) apply_filters(
 			self::FILTER_ERROR_MESSAGE,
-			__('Too many failed login attempts. Please try again later.', YARD_WARDEN_TEXT_DOMAIN)
+			__('Too many failed login attempts. Please try again later.', 'yard-warden')
 		);
 	}
 

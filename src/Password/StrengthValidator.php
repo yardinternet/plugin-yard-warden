@@ -36,7 +36,7 @@ class StrengthValidator
 				'weak_password_length',
 				sprintf(
 					/* translators: %d: minimum password length */
-					__('Password must be at least %d characters.', YARD_WARDEN_TEXT_DOMAIN),
+					__('Password must be at least %d characters.', 'yard-warden'),
 					$minLength
 				)
 			);
@@ -46,7 +46,7 @@ class StrengthValidator
 		$result = $this->zxcvbn->passwordStrength($password, $this->userInputs($user));
 
 		if ((int) ($result['score'] ?? 0) < $minScore) {
-			$feedback = $result['feedback']['warning'] ?? __('This password is too easy to guess.', YARD_WARDEN_TEXT_DOMAIN);
+			$feedback = $result['feedback']['warning'] ?? __('This password is too easy to guess.', 'yard-warden');
 
 			return new WP_Error('weak_password_score', (string) $feedback);
 		}

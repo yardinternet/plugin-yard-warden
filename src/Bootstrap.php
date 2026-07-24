@@ -39,7 +39,7 @@ class Bootstrap
 	public static function loadPluginTextDomain(): void
 	{
 		\load_plugin_textdomain(
-			YARD_WARDEN_TEXT_DOMAIN,
+			'yard-warden',
 			false,
 			YARD_WARDEN_PLUGIN_NAME . '/languages/'
 		);
