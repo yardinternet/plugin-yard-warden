@@ -15,6 +15,7 @@ class StrengthValidator
 {
 	public const DEFAULT_MIN_LENGTH = 16;
 	public const DEFAULT_MIN_SCORE = 4;
+	public const MAX_SCORE = 4;
 
 	protected Zxcvbn $zxcvbn;
 
