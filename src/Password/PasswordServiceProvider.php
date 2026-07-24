@@ -43,12 +43,7 @@ class PasswordServiceProvider
 
 	private function maybeAddValidationError(WP_Error $errors, $user): void
 	{
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- fires from
-		// user_profile_update_errors / validate_password_reset, both only invoked
-		// by WP core after its own nonce check on the profile/reset-password form.
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitizing
-		// would mutate the value (trimmed/stripped) so the strength check would run against a
-		// different string than the password WP actually sets. Never stored or output as-is.
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- fires from user_profile_update_errors/validate_password_reset, only invoked by WP core after its own nonce check; sanitizing would mutate the value so the strength check would run against a different string than the password WP actually sets, and it's never stored or output as-is.
 		$password = isset($_POST['pass1']) ? (string) wp_unslash($_POST['pass1']) : '';
 
 		if ('' === $password) {

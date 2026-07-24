@@ -64,8 +64,7 @@ class LostPasswordServiceProvider
 	 */
 	public function ambiguousConfirmMessage(WP_Error $errors): WP_Error
 	{
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only redirect
-		// flag from wp_safe_redirect() above, not a form submission; no nonce to check.
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only redirect flag from wp_safe_redirect() above, not a form submission; no nonce to check.
 		if (! isset($_GET['checkemail']) || 'confirm' !== $_GET['checkemail']) {
 			return $errors;
 		}

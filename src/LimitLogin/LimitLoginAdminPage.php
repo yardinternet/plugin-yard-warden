@@ -85,8 +85,7 @@ class LimitLoginAdminPage
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display
-		// flag set by our own redirect in handleClearRequest(), not a form submission.
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only display flag set by our own redirect in handleClearRequest(), not a form submission.
 		if (isset($_GET['settings-updated'])) {
 			settings_errors(self::MENU_SLUG);
 		}
