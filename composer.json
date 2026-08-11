@@ -20,7 +20,9 @@
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",
-    "yard/php-cs-fixer-rules": "^1.0"
+    "yard/php-cs-fixer-rules": "^1.0",
+    "szepeviktor/phpstan-wordpress": "^2.0",
+    "johnbillion/wp-compat": "^1.5"
   },
   "autoload": {
     "psr-4": {
@@ -34,7 +36,8 @@
     "post-update-cmd": [
       "composer dump-autoload"
     ],
-    "format": " ./vendor/bin/php-cs-fixer fix"
+    "format": " ./vendor/bin/php-cs-fixer fix",
+    "analyse": "vendor/bin/phpstan analyse --debug --memory-limit 1G"
   },
   "config": {
     "allow-plugins": {

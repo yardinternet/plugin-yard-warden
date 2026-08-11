@@ -1,0 +1,12 @@
+includes:
+	- vendor/szepeviktor/phpstan-wordpress/extension.neon
+	- vendor/johnbillion/wp-compat/extension.neon
+
+parameters:
+	level: 8
+	paths:
+		- src
+	scanFiles:
+		- yard-warden.php
+	WPCompat:
+		pluginFile: yard-warden.php
