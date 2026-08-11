@@ -10,8 +10,8 @@
 .phpunit.result.cache
 .DS_Store
 wp-content
-tests
-data-scripts
+tests/*
+data-scripts/*
 composer.lock
 *.neon
 *.dist
