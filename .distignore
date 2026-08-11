@@ -11,3 +11,7 @@
 .DS_Store
 wp-content
 tests
+data-scripts
+composer.lock
+*.neon
+*.dist
