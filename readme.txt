@@ -4,7 +4,7 @@ Tags: security, password, login, brute force, multisite
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,13 @@ Yes, via the `yard::warden/limit-login/enabled` filter.
 
 == Changelog ==
 
+= 1.0.3 =
+* Minimum WordPress version raised to 6.3.
+* Bundled Dutch translations removed; translations are now served through translate.wordpress.org.
+* WP_Error codes prefixed with yard_warden_ to avoid collisions with other plugins.
+* Login-limit transient keys prefixed with yard_warden_ll_.
+* Welcome-email opt-out query flag renamed to yard_warden_disable_welcome_email.
+
 = 1.0.2 =
 * Text domain adjusted to yard-warden.
 
@@ -69,6 +76,9 @@ Yes, via the `yard::warden/limit-login/enabled` filter.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Login attempt counters and active lockouts are reset on upgrade. If you use the disable_welcome_email query flag, rename it to yard_warden_disable_welcome_email.
 
 = 1.0.2 =
 Text domain change only, no action required.
