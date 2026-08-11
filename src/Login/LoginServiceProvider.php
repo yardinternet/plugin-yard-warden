@@ -52,7 +52,7 @@ class LoginServiceProvider
 			return $user;
 		}
 
-		return new WP_Error('invalid_credentials', $this->genericErrorMessage());
+		return new WP_Error('yard_warden_invalid_credentials', $this->genericErrorMessage());
 	}
 
 	private function isLeakyCode(string $code): bool

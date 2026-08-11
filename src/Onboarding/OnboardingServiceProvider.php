@@ -29,7 +29,7 @@ class OnboardingServiceProvider
 {
 	public const FILTER_WELCOME_SUBJECT = 'yard::warden/onboarding/welcome-subject';
 	public const FILTER_WELCOME_BODY = 'yard::warden/onboarding/welcome-body';
-	public const DISABLE_WELCOME_REQUEST_KEY = 'disable_welcome_email';
+	public const DISABLE_WELCOME_REQUEST_KEY = 'yard_warden_disable_welcome_email';
 
 	public function register(): void
 	{
