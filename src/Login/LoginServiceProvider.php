@@ -48,7 +48,7 @@ class LoginServiceProvider
 			return $user;
 		}
 
-		if (! $this->isLeakyCode($user->get_error_code())) {
+		if (! $this->isLeakyCode((string) $user->get_error_code())) {
 			return $user;
 		}
 
