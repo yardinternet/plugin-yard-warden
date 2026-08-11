@@ -26,7 +26,7 @@ class LimitLoginServiceProvider
 	public const FILTER_ERROR_MESSAGE = 'yard::warden/limit-login/error-message';
 	public const FILTER_SKIP_ERROR_CODES = 'yard::warden/limit-login/skip-error-codes';
 
-	public const ERROR_CODE = 'too_many_attempts';
+	public const ERROR_CODE = 'yard_warden_too_many_attempts';
 
 	/** @var string[] */
 	private const DEFAULT_SKIP_CODES = ['expired_session'];
@@ -44,7 +44,7 @@ class LimitLoginServiceProvider
 		// Priority 30: after core auth at 20, so a valid-credential WP_User gets
 		// overwritten with our lockout error. Same priority as LoginServiceProvider
 		// but registered after it — LoginServiceProvider only rewrites leaky codes,
-		// not our too_many_attempts code, so our response is the final value.
+		// not our yard_warden_too_many_attempts code, so our response is the final value.
 		add_filter('authenticate', [$this, 'checkLockout'], 30, 2);
 		add_action('wp_login_failed', [$this, 'recordFailedAttempt'], 10, 2);
 		add_action('wp_login', [$this, 'onSuccessfulLogin'], 10, 1);

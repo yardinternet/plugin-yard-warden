@@ -22,8 +22,8 @@ if (! defined('ABSPATH')) {
  */
 class Limiter
 {
-	protected const KEY_PREFIX = 'yw_ll:';
-	protected const LOCK_PREFIX = 'yw_ll:lock:';
+	protected const KEY_PREFIX = 'yard_warden_ll_';
+	protected const LOCK_PREFIX = 'yard_warden_ll_lock_';
 
 	public const DEFAULT_THRESHOLD_IP_USER = 5;
 	public const DEFAULT_THRESHOLD_IP = 50;
