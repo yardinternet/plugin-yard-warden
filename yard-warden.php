@@ -33,7 +33,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 define('YARD_WARDEN_VERSION', '1.0.2');
 define('YARD_WARDEN_REQUIRED_WP_VERSION', '6.3');
 define('YARD_WARDEN_PLUGIN_FILE', __FILE__);
-define('YARD_WARDEN_PLUGIN_URL', plugins_url('/', YARD_WARDEN_PLUGIN_FILE));
 define('YARD_WARDEN_PLUGIN_DIR_PATH', plugin_dir_path(YARD_WARDEN_PLUGIN_FILE));
 
 require_once __DIR__ . '/src/Bootstrap.php';

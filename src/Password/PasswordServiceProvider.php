@@ -29,19 +29,19 @@ class PasswordServiceProvider
 		add_action('validate_password_reset', [$this, 'handlePasswordReset'], 10, 2);
 	}
 
-	public function handleProfileUpdateErrors(WP_Error $errors, bool $update, $user): void
+	public function handleProfileUpdateErrors(WP_Error $errors, bool $update, object $user): void
 	{
 		unset($update);
 
 		$this->maybeAddValidationError($errors, $user);
 	}
 
-	public function handlePasswordReset(WP_Error $errors, $user): void
+	public function handlePasswordReset(WP_Error $errors, object $user): void
 	{
 		$this->maybeAddValidationError($errors, $user);
 	}
 
-	private function maybeAddValidationError(WP_Error $errors, $user): void
+	private function maybeAddValidationError(WP_Error $errors, object $user): void
 	{
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- fires from user_profile_update_errors/validate_password_reset, only invoked by WP core after its own nonce check; sanitizing would mutate the value so the strength check would run against a different string than the password WP actually sets, and it's never stored or output as-is.
 		$password = isset($_POST['pass1']) ? (string) wp_unslash($_POST['pass1']) : '';

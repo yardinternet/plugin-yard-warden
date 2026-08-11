@@ -34,7 +34,7 @@ class PasswordUIServiceProvider
 
 		wp_enqueue_script(
 			self::SCRIPT_HANDLE,
-			YARD_WARDEN_PLUGIN_URL . 'resources/js/password-ui.js',
+			plugins_url('resources/js/password-ui.js', YARD_WARDEN_PLUGIN_FILE),
 			['zxcvbn-async', 'password-strength-meter'],
 			YARD_WARDEN_VERSION,
 			true
