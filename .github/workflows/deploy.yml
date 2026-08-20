@@ -9,6 +9,9 @@ on:
         description: 'Run without committing to SVN'
         type: boolean
         default: true
+      version:
+        description: 'Version to deploy (required for manual runs, e.g. 1.0.3)'
+        type: string
 
 jobs:
   tag:
@@ -36,6 +39,7 @@ jobs:
           dry-run: ${{ inputs.dry_run || false }}
         env:
           SLUG: yard-warden
+          VERSION: ${{ inputs.version }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
 
