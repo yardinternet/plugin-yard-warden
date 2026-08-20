@@ -4,6 +4,11 @@ on:
     tags:
       - "*"
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without committing to SVN'
+        type: boolean
+        default: true
 
 jobs:
   tag:
@@ -28,6 +33,7 @@ jobs:
         uses: 10up/action-wordpress-plugin-deploy@stable
         with:
           generate-zip: true
+          dry-run: ${{ inputs.dry_run || false }}
         env:
           SLUG: yard-warden
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
