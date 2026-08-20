@@ -1,0 +1,41 @@
+name: Deploy to WordPress.org
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+
+jobs:
+  tag:
+    name: New tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v5
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          coverage: none
+          tools: composer
+
+      - name: Install runtime dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: WordPress deploy plugin
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          generate-zip: true
+        env:
+          SLUG: yard-warden
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.deploy.outputs.zip-path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
