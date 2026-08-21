@@ -4,7 +4,7 @@ Tags: security, password, login, brute force, multisite
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,10 @@ Yes, via the `yard::warden/limit-login/enabled` filter.
 
 == Changelog ==
 
+= 1.0.5 =
+* Source code published on GitHub and the package registered on Packagist.
+* Added the EUPL-1.2 licence text and declared it in composer.json.
+
 = 1.0.4 =
 * Fixed a fatal error when the plugin is installed via Composer, where dependencies are autoloaded by the project instead of the plugin.
 
@@ -79,6 +83,9 @@ Yes, via the `yard::warden/limit-login/enabled` filter.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+Licensing and packaging metadata only, no action required.
 
 = 1.0.4 =
 Bugfix for Composer-based installs, no action required.

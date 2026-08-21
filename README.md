@@ -7,7 +7,7 @@
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: EUPL-1.2
 License URI: https://eupl.eu/1.2/en/
 
