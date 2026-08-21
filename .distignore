@@ -9,6 +9,8 @@
 .php-cs-fixer.cache
 .phpunit.result.cache
 .DS_Store
+.wordpress-org
+README.md
 wp-content
 tests/*
 data-scripts/*

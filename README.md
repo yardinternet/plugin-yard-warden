@@ -1,3 +1,5 @@
+![Yard | Warden](.wordpress-org/banner-772x250.png)
+
 # Yard | Warden
 
 Requires at least: 6.3
