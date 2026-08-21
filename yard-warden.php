@@ -27,7 +27,9 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
 
 define('YARD_WARDEN_VERSION', '1.0.3');
 define('YARD_WARDEN_REQUIRED_WP_VERSION', '6.3');
