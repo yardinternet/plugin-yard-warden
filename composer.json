@@ -1,20 +1,12 @@
 {
   "name": "plugin/yard-warden",
   "description": "Enhanced password and login security for WordPress.",
+  "license": "EUPL-1.2",
   "homepage": "https://www.yard.nl",
   "type": "wordpress-plugin",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    },
-    {
-      "type": "composer",
-      "url": "https://satis.yard.nl"
-    }
-  ],
   "require": {
     "php": ">=7.4",
+    "composer/installers": "^1.0 || ^2.0",
     "yard/logger": "^1.0",
     "bjeavons/zxcvbn-php": "^1.3"
   },
