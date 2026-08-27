@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -45,7 +45,7 @@ jobs:
 
       - name: Create GitHub release
         if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: ${{ steps.deploy.outputs.zip-path }}
         env:
