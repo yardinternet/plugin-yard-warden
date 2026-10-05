@@ -9,7 +9,7 @@ declare(strict_types=1);
  *
  * Plugin Name: Yard | Warden
  * Description: Enhanced password and login security for WordPress.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: Yard | Digital Agency
  * Author URI: https://www.yard.nl
  * License: GPLv2 or later
@@ -28,10 +28,16 @@ if (! defined('ABSPATH')) {
 }
 
 if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-	require_once __DIR__ . '/vendor/autoload.php';
+	$loader = require_once __DIR__ . '/vendor/autoload.php';
+
+	// Composer prepends autoloaders by default, so the bundled vendor would shadow a host
+	// Composer install (e.g. Bedrock) for shared packages like psr/log and break the host's
+	// Monolog. Append instead: the host wins when present, the bundled copy is used otherwise.
+	$loader->unregister();
+	$loader->register(false);
 }
 
-define('YARD_WARDEN_VERSION', '1.0.5');
+define('YARD_WARDEN_VERSION', '1.0.6');
 define('YARD_WARDEN_REQUIRED_WP_VERSION', '6.3');
 define('YARD_WARDEN_PLUGIN_FILE', __FILE__);
 define('YARD_WARDEN_PLUGIN_DIR_PATH', plugin_dir_path(YARD_WARDEN_PLUGIN_FILE));

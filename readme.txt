@@ -4,7 +4,7 @@ Tags: security, password, login, brute force, multisite
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,9 @@ Yes, via the `yard::warden/limit-login/enabled` filter.
 
 == Changelog ==
 
+= 1.0.6 =
+* Fixed a fatal error on Composer-managed sites (e.g. Bedrock) where the bundled autoloader shadowed the host's copy of shared packages such as psr/log. The bundled autoloader is now appended instead of prepended, so the host's packages take precedence.
+
 = 1.0.5 =
 * Source code published on GitHub and the package registered on Packagist.
 * Added the EUPL-1.2 licence text and declared it in composer.json.
@@ -83,6 +86,9 @@ Yes, via the `yard::warden/limit-login/enabled` filter.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+Bugfix for Composer-managed sites that ship their own copy of shared packages, no action required.
 
 = 1.0.5 =
 Licensing and packaging metadata only, no action required.
